@@ -1,0 +1,88 @@
+/* AddForm CSS */
+.form {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.heading {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.error {
+  color: red;
+  font-size: 0.875em;
+  margin-top: 0.25em;
+}
+.heading h3 {
+  font-size: 24px;
+  color: #333;
+}
+
+.addform {
+  display: flex;
+  flex-direction: column;
+}
+
+.formdiv {
+  margin-bottom: 15px;
+}
+
+.formdiv label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #555;
+}
+
+.formdiv input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.seconddiv {
+  display: flex;
+  justify-content: space-between;
+}
+
+.usernamediv, .passworddiv {
+  flex: 1;
+  margin-right: 10px;
+}
+
+.passworddiv {
+  margin-right: 0;
+}
+
+.submit-button {
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.submit-button:hover {
+  background-color: #0056b3;
+}
+
+@media (max-width: 768px) {
+  .seconddiv {
+    flex-direction: column;
+  }
+
+  .usernamediv, .passworddiv {
+    margin-right: 0;
+    margin-bottom: 15px;
+  }
+}

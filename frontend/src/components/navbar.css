@@ -1,0 +1,100 @@
+nav {
+  display: flex;
+  justify-content: space-between;
+  background: linear-gradient(
+    90deg,
+    rgba(0, 123, 255, 1) 0%,
+    rgba(0, 200, 255, 1) 100%
+  );
+  padding: 10px 20px;
+  flex-wrap: wrap; /* Allow wrapping for smaller screens */
+  transition: all 0.5s;
+  flex-grow: 1; /* Allow nav to grow and take up available space */
+}
+.hamburger {
+  position: absolute;
+  top: 5px;
+  right: 10px;
+  display: none;
+}
+.firstcontent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image img {
+  width: 50px;
+}
+
+.logoname {
+  font-weight: bold;
+  color: white; /* Ensure the text is readable on the background */
+}
+
+.secondcontent ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.secondcontent ul li {
+  list-style: none;
+  cursor: pointer;
+}
+
+.secondcontent ul li a,.logout {
+  color: white; /* Ensure the text is readable on the background */
+  text-decoration: none;
+  font-size: 20px;
+  margin: 0 10px;
+  padding: 5px 5px;
+}
+
+.active,.secondcontent ul li a:hover {
+  color: white;
+  background-color: rgba(
+    0,
+    123,
+    255,
+    0.7
+  ); /* Adjust hover background color to match the theme */
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 70px;
+  }
+  nav.navbar {
+    height: auto;
+  }
+  .secondcontent ul {
+    flex-direction: column;
+    align-items: center;
+  }
+  .firstcontent {
+    width: 100%;
+  }
+  .hamburger {
+    display: block;
+    z-index: 7;
+  }
+  .secondcontent ul li {
+    margin: 5px 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .logoname {
+    font-size: 18px;
+  }
+
+  .secondcontent ul li a {
+    font-size: 16px;
+    margin: 5px 0;
+  }
+}
